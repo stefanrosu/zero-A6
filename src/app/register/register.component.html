@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <h3 style="text-align: center">Please create an account!</h3>
+    <hr>
+  </div>
+  <div class="row">
+    <div class="col-xs-7">
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+        <div class="form-group">
+          <label for="">Email</label>
+          <input type="email" name="email_register" id="email_register" class="form-control" formControlName="email_register">
+        </div>
+        <div class="form-group">
+          <label for="">Password</label>
+          <input type="password" name="password_register" id="password_register" class="form-control" formControlName="password_register">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Create</button>
+      </form>
+    </div>
+  </div>
+</div>
