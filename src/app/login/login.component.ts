@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import * as firebase from 'firebase';
 import { Router } from '@angular/router';
 
@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = new FormGroup({
-      'email_login': new FormControl(null),
-      'password_login': new FormControl(null),
+      'email_login': new FormControl(null, Validators.required),
+      'password_login': new FormControl(null,Validators.required)
     });
   }
   onLogin() {

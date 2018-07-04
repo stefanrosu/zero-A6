@@ -1,32 +1,32 @@
 <h2 style="text-align: center">Your profile</h2>
 <hr>
 <div class="row wrapper">
-    <div class="col-md-7">
-        <form [formGroup]="profileForm" (ngSubmit)="onProfile()" >
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" name="name" id="name" class="form-control" formControlName="name">
-            </div>
-            <div class="form-group">
-                <label>Surname</label>
-                <input type="text" name="surname" id="surname" class="form-control" formControlName="surname">
-            </div>
-            <div class="form-group">
-                <label>Gender</label>
-                <div *ngFor="let gender of genders">
-                  <label>{{gender}}</label>
-                  <input type="radio" name="gender" id="gender" [value]="gender" formControlName="gender" >
-                </div>
-            </div>
-            <div class="form-group">
-                <label>Age</label>
-                <input type="number" name="age" id="age" class="form-control" formControlName="age">
-            </div>
-            <div class="form-group">
-                <label>Hobby</label>
-                <textarea name="hobby" id="hobby" cols="71" rows="5" formControlName="hobby"></textarea>
-            </div>
-            <button type="submit" class="btn btn-success">Save Data</button>
-        </form>
-    </div>
+  <div class="col-md-7">
+    <form [formGroup]="profileForm" (ngSubmit)="onProfile()">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="name" id="name" class="form-control" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label>Surname</label>
+        <input type="text" name="surname" id="surname" class="form-control" formControlName="surname">
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+        <div *ngFor="let gender of genders">
+          <label>{{gender}}</label>
+          <input type="radio" name="gender" id="gender" [value]="gender" formControlName="gender">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Age</label>
+        <input type="number" name="age" id="age" class="form-control" formControlName="age">
+      </div>
+      <div class="form-group">
+        <label>Hobby</label>
+        <textarea name="hobby" id="hobby" cols="71" rows="5" formControlName="hobby"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Save Data</button>
+    </form>
+  </div>
 </div>

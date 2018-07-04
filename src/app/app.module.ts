@@ -10,11 +10,13 @@ import { HeaderComponent } from "./header/header.component";
 import { RegisterComponent } from "./register/register.component";
 import { LoginComponent } from "./login/login.component";
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ShowProfileComponent } from './show-profile/show-profile.component';
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
   { path: "home", component: HomeComponent },
   { path: "profile", component: ProfileComponent },
+  { path: "show-profile", component: ShowProfileComponent },
   { path: "register", component: RegisterComponent },
   { path: "login", component: LoginComponent },
   { path: "**", component: NotFoundComponent, pathMatch: 'full' }
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     RegisterComponent,
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ShowProfileComponent
   ],
   imports: [
     BrowserModule,
