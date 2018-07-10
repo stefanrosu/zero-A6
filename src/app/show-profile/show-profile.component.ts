@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { checkAndUpdatePureExpressionDynamic } from '@angular/core/src/view/pure_expression';
+import { Http } from '@angular/http';
 import { ProfileService } from '../profile.service';
 
 @Component({
@@ -24,6 +23,7 @@ export class ShowProfileComponent implements OnInit {
     this.profileService.getServers().subscribe(
       (servers: any[]) => {
         console.log(servers);
+        // this.showData = servers; aici crapa :)))
       }, error => {
         alert('Error')
       });
