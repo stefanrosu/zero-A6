@@ -5,7 +5,7 @@
     <form [formGroup]="profileForm" (ngSubmit)="onProfile()">
       <div class="form-group">
         <label>Name</label>
-        <input type="text" name="name" id="name" class="form-control" formControlName="name">
+        <input type="text" name="name" id="name" class="form-control" formControlName="name" >
       </div>
       <div class="form-group">
         <label>Surname</label>
@@ -15,7 +15,7 @@
         <label>Gender</label>
         <div *ngFor="let gender of genders">
           <label>{{gender}}</label>
-          <input type="radio" name="gender" id="gender" [value]="gender" formControlName="gender">
+          <input type="radio" name="gender" id="gender" [value]="gender" formControlName="gender" >
         </div>
       </div>
       <div class="form-group">
@@ -26,6 +26,7 @@
         <label>Hobby</label>
         <textarea name="hobby" id="hobby" cols="71" rows="5" formControlName="hobby"></textarea>
       </div>
+      
       <button type="submit" class="btn btn-success">Save Data</button>
     </form>
   </div>

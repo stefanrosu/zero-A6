@@ -29,17 +29,17 @@ export class ProfileComponent implements OnInit {
     const Gender = this.profileForm.value.gender;
     const Age = this.profileForm.value.age;
     const Hobby = this.profileForm.value.hobby;
-    const Data = [
-      {
-        name: Name, 
-        surname: Surname, 
-        gender: Gender, 
-        age: Age, 
+    const Data =
+      [{
+        name: Name,
+        surname: Surname,
+        gender: Gender,
+        age: Age,
         hobby: Hobby
       }];
-    this.http.post('https://zero-bd2ea.firebaseio.com/profile.json', Data).subscribe(response =>{
-      alert('Your data is saved!'),this.profileForm.reset(), error =>{ alert('Something is wrong!')}
+    this.http.post('https://zero-bd2ea.firebaseio.com/profile.json', Data).subscribe(response => {
+      alert('Your data is saved!'), this.profileForm.reset(), error => { alert('Something is wrong!') }
     });
-    
+
   }
 }

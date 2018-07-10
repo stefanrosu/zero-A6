@@ -1,10 +1,16 @@
-<h3 style="text-align: center">Data from all users <span><button type="submit" class="btn btn-primary" (click)="onShow()" >Show</button></span> </h3>
-
+<h3 style="text-align: center">Data from all users</h3>
 <hr>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      
+      <h2>Date</h2><button type="submit" class="btn btn-primary" (click)="getData()" >Get Data</button>
+      <div *ngFor="let item of showData">
+        <hr>
+        <p>nume: {{item.name}} </p>
+        <p>prenume: {{item.surname}} </p>
+        <p>gen: {{item.gender}} </p>
+        <p>ani: {{item.age}} </p>
+        <p>Activitati: {{item.hobby}} </p><br><hr>
+      </div>
     </div>
   </div>
-</div>

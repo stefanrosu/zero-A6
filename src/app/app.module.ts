@@ -11,6 +11,7 @@ import { RegisterComponent } from "./register/register.component";
 import { LoginComponent } from "./login/login.component";
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ShowProfileComponent } from './show-profile/show-profile.component';
+import { ProfileService } from "./profile.service";
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
@@ -39,7 +40,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     HttpModule
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

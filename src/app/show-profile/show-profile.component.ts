@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { checkAndUpdatePureExpressionDynamic } from '@angular/core/src/view/pure_expression';
+import { ProfileService } from '../profile.service';
 
 @Component({
   selector: 'app-show-profile',
@@ -7,17 +9,23 @@ import { Http, Response } from '@angular/http';
   styleUrls: ['./show-profile.component.css']
 })
 export class ShowProfileComponent implements OnInit {
+  showData = [{
+    name: 'Andreea',
+    surname: 'Alupoaei',
+    gender: 'feminin',
+    age: 23,
+    hobby: 'Books'
+  }];
 
-  constructor(private http:Http) { }
-
+  constructor(private http: Http, private profileService: ProfileService) { }
   ngOnInit() {
-  
   }
-  onShow(){
-    this.http.get('https://zero-bd2ea.firebaseio.com/profile.json').subscribe((response: Response)=>{
-      const data = response.json();
-    },error =>{alert('Error')}
-  );
+  getData() {
+    this.profileService.getServers().subscribe(
+      (servers: any[]) => {
+        console.log(servers);
+      }, error => {
+        alert('Error')
+      });
   }
-
 }
